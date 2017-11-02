@@ -2,7 +2,6 @@
 #-*- coding: utf-8 -*-
 # 3题c小问
 # one-way ANOVA
-import matplotlib.pyplot as plt
 import numpy as np
 import xlrd
 import math
