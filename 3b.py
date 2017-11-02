@@ -1,5 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
+# 3题b小问
+# 画出不同类型的年龄分布
 import matplotlib.pyplot as plt
 import numpy as np
 import xlrd

@@ -1,6 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
-#画出平均年龄分布图像
+# 3题a小问
+# 画出平均年龄分布图像
 import matplotlib.pyplot as plt
 import xlrd
 import math
