@@ -46,10 +46,11 @@ msw = ssw/dfw
 F = msb/msw
 print ssb," ",dfb," ",msb," ",F
 print ssw,' ',dfw,' ',msw
+print ssb+ssw,' ',dfb+dfw
 #F(dfb,dfw) 带入求得f,与显著性阈值0.05比较
 a = 0.05
 x=f.isf(a,dfb,dfw)
 if F>x:
-    print F,'reject H0'
+    print F,' ',x,'reject H0'
 else:
-    print F,'not reject H0'
+    print F,' ',x,'not reject H0'
