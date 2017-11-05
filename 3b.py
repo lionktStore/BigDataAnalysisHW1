@@ -8,7 +8,8 @@ import xlrd
 import math
 from xlrd import open_workbook
 
-wb = open_workbook('/media/rongliangzi/新加卷/学习资料/研一/大数据分析/hw1/data.xlsx')
+#wb = open_workbook('/media/rongliangzi/新加卷/学习资料/研一/大数据分析/hw1/data.xlsx')
+wb = open_workbook('/home/rongliangzi/PycharmProjects/BigDataAnalysisHW1/data.xlsx')
 min_age = 0
 max_age = 70
 x_data=range(min_age,max_age,1)

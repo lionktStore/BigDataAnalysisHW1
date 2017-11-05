@@ -8,7 +8,8 @@ import math
 import numpy as np
 from xlrd import open_workbook
 #读取数据
-wb = open_workbook('/media/rongliangzi/新加卷/学习资料/研一/大数据分析/hw1/data.xlsx')
+#wb = open_workbook('/media/rongliangzi/新加卷/学习资料/研一/大数据分析/hw1/data.xlsx')
+wb = open_workbook('/home/rongliangzi/PycharmProjects/BigDataAnalysisHW1/data.xlsx')
 worksheet = wb.sheet_by_index(0)
 cols = worksheet.col_values(6);
 cols.pop(0)
