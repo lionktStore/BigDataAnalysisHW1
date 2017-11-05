@@ -36,5 +36,5 @@ plt.show()
 #use the normaltest to test if the data follow Gaussian Distribution
 (s,p)=normaltest(y_data)
 if p > 0.05:
-    print 'p=',p,', p > 0.05, the data follow Gaussian Distribution'
+    print 'p=',p,', p > 0.05, the data follows Gaussian Distribution'
 print 'over!'
