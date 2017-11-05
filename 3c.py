@@ -10,17 +10,19 @@ from scipy.stats import f
 
 from xlrd import open_workbook
 #read file
-#wb = open_workbook('/media/rongliangzi/新加卷/学习资料/研一/大数据分析/hw1/data.xlsx')
+
 wb = open_workbook('/home/rongliangzi/PycharmProjects/BigDataAnalysisHW1/data.xlsx')
 worksheet = wb.sheet_by_index(0)
 
 cates = 5;
 cate = worksheet.col_values(1)
 cols = worksheet.col_values(6)
+cate.pop(0)
+cols.pop(0)
 ary_mtx = [[]]
 for i in range(cates-1):
     ary_mtx.append([])
-for i in range(1,len(cols)):
+for i in range(0,len(cols)):
     ary_mtx[int(cate[i])-1].append(int(math.floor(cols[i])))
 
 data_avr = [0 for i in range(cates)]
@@ -40,7 +42,7 @@ for i in range(cates):
     for j in range(len(ary_mtx[i])):
        ssw += (ary_mtx[i][j]-data_avr[i])**2
 dfb = cates-1
-dfw = len(cols)-1-cates
+dfw = len(cols)-cates
 msb = ssb/dfb
 msw = ssw/dfw
 F = msb/msw
@@ -51,6 +53,6 @@ print ssb+ssw,' ',dfb+dfw
 a = 0.05
 x=f.isf(a,dfb,dfw)
 if F>x:
-    print F,' ',x,'reject H0'
+    print F,' ',x,'reject H0:The means of all groups are equal.'
 else:
-    print F,' ',x,'not reject H0'
+    print F,' ',x,'not reject H0:The means of all groups are equal.'
